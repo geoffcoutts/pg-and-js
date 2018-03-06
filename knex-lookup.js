@@ -16,6 +16,7 @@ knex('famous_people')
   .then(function(query) {
     result = query;
     output(result)
+    knex.destroy()
   })
 
 function output (result) {
@@ -24,5 +25,4 @@ function output (result) {
   console.log(`Found ${totalresults} person(s) by the name of "${process.argv[2]}":`)
   for (let i = 0; i < totalresults; i++) {
     console.log (`- ${i + 1}: ${result[i].first_name} ${result[i].last_name}, born ${result[i].birthdate}`)
-  return knex.destroy()
 }};

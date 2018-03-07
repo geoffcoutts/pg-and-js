@@ -9,12 +9,9 @@ exports.up = function(knex, Promise) {
           table.increments('id').primary();
           table.string('description');
           table.date('date_achieved');
-
-
         })
         .then(console.log('hi'))
       }
-
     })
   ])
 };
